@@ -1,0 +1,36 @@
+---
+import "../styles/theme.css"
+import Header from "../components/Header/Header.astro"
+import ThemeButton from "../components/ThemeButton/ThemeButton.astro";
+
+const { title="Marc Flaquer i Solà", description="Descripció del lloc web" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="author" content="@kokepizza @axvgarcia">
+    <meta name="keywords" content="">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <Header />
+    <ThemeButton />
+    <main>
+        <slot />
+    </main>
+
+</body>

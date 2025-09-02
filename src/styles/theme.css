@@ -1,0 +1,67 @@
+/* RESET */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Azeret Mono';
+    src: url('/fonts/AzeretMono-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+}
+
+/* View Transition */
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-group(*) {
+    animation-duration: 1s;
+}
+
+/* Estilos base */
+:root {
+    color-scheme: dark;
+    --black: #1D1D1B;
+    --white: #F5F5F5;
+    --gray: #555;
+    --padding-x: 1rem;
+    --padding-y: .5rem;
+}
+
+[data-theme="light"] {
+    color-scheme: light;
+    --black: #F5F5F5;
+    --white: #1D1D1B;
+    --gray: #B0B0B0;
+}
+
+body {
+    font-family: 'Azeret Mono', 'Courier New', Courier, monospace;
+    font-weight: 300;
+    font-size: .875rem;
+    background-color: var(--white);
+    color: var(--black);
+    transition: background-color .5s ease, color .5s ease;
+}

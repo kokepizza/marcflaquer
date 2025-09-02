@@ -1,0 +1,24 @@
+---
+import "./Header.css"
+const pathname = Astro.url.pathname;
+const currentPath = pathname !== '/' && pathname.endsWith('/')
+  ? pathname.slice(0, -1)
+  : pathname;
+---
+
+<header class="header">
+  <a href="/" class="logo-mf">MFS</a>
+  <!-- <button class="burger-menu">
+    <svg class="burger-icon" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="line top" d="M16 0V2H0V0H16Z" fill="var(--black)"/>
+      <path class="line bottom" d="M16 8V10H0V8H16Z" fill="var(--black)"/>
+    </svg>
+  </button> -->
+  <nav class="navigation">
+    <a href="/" class={currentPath === '/' ? 'current-page' : ''}>feed</a>
+    <a href="/work-list" class={currentPath === '/work-list' ? 'current-page' : ''}>list</a>
+    <a href="/services" class={currentPath === '/services' ? 'current-page' : ''}>services</a>
+    <a href="/about" class={currentPath === '/about' ? 'current-page' : ''}>about</a>
+    <a href="mailto:hey@marcflaquer.com">hey@marcflaquer.com</a>
+  </nav>
+</header>

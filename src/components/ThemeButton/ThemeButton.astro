@@ -1,0 +1,38 @@
+---
+
+---
+
+<style>
+  button {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: var(--padding-y);
+    left: var(--padding-x);
+    background-color: var(--black);
+    transition: background-color 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<button
+  onclick={`(() => {
+    const root = document.documentElement;
+    const newTheme = root.dataset.theme === 'light' ? 'dark' : 'light';
+    root.dataset.theme = newTheme;
+    localStorage.setItem('theme', newTheme);
+  })()`}
+>
+</button>
+
+<script is:inline>
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    document.documentElement.dataset.theme = savedTheme;
+  }
+</script>
