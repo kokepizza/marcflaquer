@@ -14,7 +14,7 @@ const currentPath = pathname !== '/' && pathname.endsWith('/')
       <path class="line bottom" d="M16 8V10H0V8H16Z" fill="var(--black)"/>
     </svg>
   </button> -->
-  <nav class="navigation">
+  <nav class="nav">
     <a href="/" class={currentPath === '/' ? 'current-page' : ''}>feed</a>
     <a href="/work-list" class={currentPath === '/work-list' ? 'current-page' : ''}>list</a>
     <a href="/services" class={currentPath === '/services' ? 'current-page' : ''}>services</a>
