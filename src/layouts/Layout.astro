@@ -29,8 +29,26 @@ const { title="Marc Flaquer i Solà", description="Descripció del lloc web" } =
 <body>
     <Header />
     <ThemeButton />
+    <p class="tu">marc flaquer <span>i</span> solà</p>
     <main>
         <slot />
     </main>
 
 </body>
+
+<style>
+    .tu {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5rem;
+        font-style: italic;
+        white-space: nowrap;
+    }
+
+    span {
+        font-weight: 100;
+        font-size: 4rem;
+    }
+</style>
