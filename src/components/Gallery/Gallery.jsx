@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Gallery.css";
+import "./gallery.css";
 
 export default function Gallery({ images = [] }) {
   const [hoveredImage, setHoveredImage] = useState(null);
