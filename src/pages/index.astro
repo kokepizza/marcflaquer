@@ -1,8 +1,33 @@
 ---
-import ImageStretchEffect from "../components/ImgStretchEffect/ImgStretchEffect";
 import Layout from "../layouts/Layout.astro";
+
+import ImageStretchEffect from "../components/ImgStretchEffect/ImgStretchEffect";
+import Gallery from "../components/Gallery/Gallery";
+
+const images = [
+    "/img/00_Brunch.webp",
+    "/img/01_250TR.webp",
+    "/img/01_AutoStorica-1.webp",
+    "/img/01_Tucson.webp",
+    "/img/01_BMW R18.webp",
+    "/img/01_Clandestina.webp",
+    "/img/01_Festival Velocidad.webp",
+    "/img/01_AutoStorica-2.webp",
+    "/img/01_Chef.webp",
+    "/img/01_Nuvolari1.webp",
+    "/img/01_Classic racing.webp",
+    "/img/01_Nuvolari2.webp",
+    "/img/01_GPAndorra.webp",
+    "/img/01_GT2RS One.webp",
+    "/img/01_Bike.webp",
+    "/img/01_Espiritu Montjuic.webp",
+    "/img/01_Trackrat.webp",
+    "/img/01_AC-Cobra.webp",
+    "/img/01_Rallycars.webp"
+];
 ---
 
 <Layout>
     <!-- <ImageStretchEffect client:load /> -->
+     <Gallery client:load images={images} />
 </Layout>
